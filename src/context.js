@@ -8,10 +8,16 @@ export const languages = {
         id: "EN",
         text: EN
     },
-    /* DICA: Adicione os novos idiomas desejados */
+		spanish: {
+			id: "ES",
+			text: ES
+		},
+		portuguese: {
+			id: "PTBR",
+			text: PTBR
+		},
 };
 
-/* DICA: Use o createContext e inicie o idioma inglês como padrão(default) */
-const LanguageContext = "";
+const LanguageContext = createContext();
 
 export default LanguageContext;

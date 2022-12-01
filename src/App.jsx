@@ -9,17 +9,16 @@ function App() {
   const [language, setLanguage] = useState(languages.english);
 
   const handleChangeLA = () => {
-    setLanguage(() => {
-      //DICA: Função que troca um idioma por outro (ao clicar no botão)
-    })
+		if(language === languages.english) setLanguage(languages.spanish)
+		if(language === languages.spanish) setLanguage(languages.english)
   }
 
   return (
     <div className="App">
-      <>{/*  DICA: Adicione o provider LanguageContext */}
+      <LanguageContext.Provider value={{language, handleChangeLA}}>
         <Navbar />
         <Body />
-      </>
+      </LanguageContext.Provider>
     </div>
   )
 }
